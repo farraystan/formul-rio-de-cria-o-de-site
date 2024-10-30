@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Criação de Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .t {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h2 class="t">Formulário para Criação de Site</h2>
+
+<form>
+    <label for="pessoalComercial">Tipo de Cadastro:</label>
+    <select id="pessoalComercial" name="pessoalComercial" required>
+        <option value="pessoal">Pessoal</option>
+        <option value="comercial">Comercial</option>
+    </select>
+
+    <label for="logo">Logo:</label>
+    <input type="file" id="logo" name="logo">
+
+    <label for="cnpj">CNPJ (somente para empresas):</label>
+    <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0001-00">
+
+    <label for="colaboradores">Quantidade de colaboradores:</label>
+    <input type="number" id="colaboradores" name="colaboradores" min="0" max="1000">
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="horarioAtendimento">Horário de atendimento:</label>
+    <input type="text" id="horarioAtendimento" name="horarioAtendimento" placeholder="Ex: 09:00 - 18:00">
+
+    <label for="horarioFuncionamento">Horário de funcionamento:</label>
+    <input type="text" id="horarioFuncionamento" name="horarioFuncionamento" placeholder="Ex: 09:00 - 22:00">
+
+    <label for="cadastrosExtras">Adicionar:</label>
+    <input type="checkbox" id="clientes" name="cadastrosExtras" value="clientes">
+    <label for="clientes">Cadastro de clientes</label><br>
+    <input type="checkbox" id="colaboradores" name="cadastrosExtras" value="colaboradores">
+    <label for="colaboradores">Cadastro de colaboradores</label>
+
+    <label for="tipoSite">Tipo de site:</label>
+    <select id="tipoSite" name="tipoSite" required>
+        <option value="contato_simples">Para contato (simples, com agendamento online)</option>
+        <option value="produtos_servicos_preco">Para apresentar produtos/serviços (complexo, com os preços)</option>
+        <option value="produtos_servicos_sem_preco">Para apresentar produtos/serviços (complexo, sem os preços)</option>
+        <option value="recebimento_online">Com recebimento de pedidos online (formas de pagamento online)</option>
+    </select>
+
+    <label for="corPreferida">Preferência de cor:</label>
+    <select id="corPreferida" name="corPreferida" required>
+        <option value="vermelho">Vermelho</option>
+        <option value="amarelo">Amarelo</option>
+        <option value="azul">Azul</option>
+        <option value="sem_preferencia">Não tenho preferências</option>
+    </select>
+
+    <label for="estiloPreferido">Preferência de estilo:</label>
+    <select id="estiloPreferido" name="estiloPreferido" required>
+        <option value="minimalista">Minimalista</option>
+        <option value="classico">Clássico</option>
+        <option value="moderno">Moderno</option>
+        <option value="rustico">Rústico</option>
+        <option value="elegante">Elegante</option>
+        <option value="retro">Retrô</option>
+        <option value="grunge">Grunge</option>
+        <option value="futurista">Futurista</option>
+        <option value="art_deco">Art Déco</option>
+        <option value="experimental">Experimental</option>
+        <option value="colorido">Colorido</option>
+        <option value="natural">Natural</option>
+        <option value="funcional">Funcional</option>
+    </select>
+
+    <button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>
